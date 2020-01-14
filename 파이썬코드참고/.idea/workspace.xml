@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9210fd52-ab41-4587-a8a5-53d505b249dc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WHk3ZOQ9S7cDDnIGmUBgizsHKz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9210fd52-ab41-4587-a8a5-53d505b249dc" name="Default Changelist" comment="" />
+      <created>1578813709026</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578813709026</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="228" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578813974322">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="228" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1578813974322" />
+    <state x="527" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578814236886">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="527" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1578814236886" />
+    <state x="504" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578814813067">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="504" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1578814813067" />
+    <state x="554" y="117" key="FileChooserDialogImpl" timestamp="1578906759682">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="554" y="117" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1578906759682" />
+    <state x="564" y="59" width="670" height="676" key="search.everywhere.popup" timestamp="1578825884944">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="564" y="59" width="670" height="676" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1578825884944" />
+  </component>
+</project>
