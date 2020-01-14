@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="" />
+    <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETF종가.py" beforeDir="false" afterPath="$PROJECT_DIR$/ETF종가.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/수정종가가져오기.py" beforeDir="false" afterPath="$PROJECT_DIR$/수정종가가져오기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/stockmod.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/stockmod.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +27,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1VYS4uU8xUSWIgactZ2mZAqlyFS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,7 +41,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../파이썬코드참고" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">
@@ -181,11 +197,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="340" y="111" key="FileChooserDialogImpl" timestamp="1578897970891">
+    <state x="340" y="111" key="FileChooserDialogImpl" timestamp="1579021302627">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="414" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577861266120" />
-    <state x="340" y="111" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1578897970891" />
+    <state x="340" y="111" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1579021302627" />
     <state width="1505" height="188" key="GridCell.Tab.0.bottom" timestamp="1578289458685">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -243,10 +259,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="254" y="8" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.824@0.0.1536.824" timestamp="1577598905515" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1577843705614">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="93" y="98" width="1350" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579021513132">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1577843705614" />
+    <state x="93" y="98" width="1350" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1579021513132" />
     <state x="240" y="161" width="1149" height="333" key="com.intellij.ide.util.TipDialog" timestamp="1577936025182">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -256,6 +273,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="462" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1577858697651" />
+    <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579018936101">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1579018936101" />
     <state x="337" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577861707351">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

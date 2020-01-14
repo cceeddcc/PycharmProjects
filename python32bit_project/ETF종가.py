@@ -1,13 +1,15 @@
 "ETF 종가 가져오기"
-
-import win32com.client
 import pandas as pd
 import time
+import Cybos_function
 
+# Cybos Plus 연결 상태 확인
+Cybos_function.Get_login_status()
 
-### 연결상태 확인 1: 연결, 0: 비연결
-instCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
-print(instCpCybos.IsConnect)
+# import os
+# ### 연결상태 확인 1: 연결, 0: 비연결
+# instCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
+# print(instCpCybos.IsConnect)
 
 # ETF에 해당하는 종목만 코드 추출
 instCpCodeMgr = win32com.client.Dispatch("CpUtil.CpCodeMgr")
@@ -51,6 +53,11 @@ for code2 in ETF_codelist :
     ETF_Data_2 = pd.concat([ETF_Data_2,ETF_Data_1], axis=1)
 
     i += 1
+
+
+
+
+
 
 # ETF 데이터 저장
 ETF_Data_2.to_csv('c:\\Users\\S\\Desktop\\ETF2.csv', encoding= "euc-kr")

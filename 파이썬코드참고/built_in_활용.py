@@ -156,3 +156,47 @@ print(result)
 result = [x*y for x in range(2,10)
           for y in range(1,10)]
 print(result)
+
+
+# *args **kwargs 이해
+# packing , Unpacking 이해
+def sum(a,b) :
+    return a+b
+
+sum(1,2)
+p = (1,2)
+sum(p) # 오류 : 인자 수를 지켜야함
+sum(*p) # unpacking
+
+def sum2(*args) : # packing : 들어오는 인자를 하나의 튜플로 묶어줌
+    for arg in args :
+        arg += arg
+    return(arg)
+sum2(1,2,3) # 인자 수에 상관 없음
+
+def sum(a,b) :
+    return a+b
+d = {"a":3,"b":4}
+sum(**d) # unpacking
+
+def person(**kwargs) :
+    for k,v in kwargs.items():
+        print(k,v)
+
+person(name ="python", age=38, weight=70)
+d= {"name" : "python", "age" : 38, "weight" : 70}
+person(d) # 오류 : dict 데이터를 바로 넘겨주면 안됨 , unpacking 필요
+person(**d) # unpacking
+
+# formatting
+"My name is %s" %"하림"
+"My name is {}".format("하림")
+"{} x {} = {}".format(2,3,2*3)
+"{2} x {0} = {1}".format(3,2*3,2) # 순서 지정 가능
+
+
+# PEP8
+"""
+일관된 코딩작성방법과 관련된 문서 
+https://b.luavis.kr/python/python-convention  한글버전 
+"""

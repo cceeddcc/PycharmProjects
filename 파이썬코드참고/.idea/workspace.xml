@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9210fd52-ab41-4587-a8a5-53d505b249dc" name="Default Changelist" comment="" />
+    <list default="true" id="9210fd52-ab41-4587-a8a5-53d505b249dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/ETF종가.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/ETF종가.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/수정종가가져오기.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/수정종가가져오기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/built_in_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/built_in_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/os_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/os_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stockmod.py" beforeDir="false" afterPath="$PROJECT_DIR$/stockmod.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +24,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WHk3ZOQ9S7cDDnIGmUBgizsHKz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,7 +38,41 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\S\PycharmProjects\python64bit_project\service" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="customerService" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python64bit_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../python64bit_project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\S\PycharmProjects\python64bit_project\service\customerService.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.customerService" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -62,13 +112,33 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="504" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1578814813067" />
+    <state x="862" y="100" width="581" height="670" key="DiffContextDialog" timestamp="1579010528882">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="862" y="100" width="581" height="670" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1579010528882" />
     <state x="554" y="117" key="FileChooserDialogImpl" timestamp="1578906759682">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="554" y="117" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1578906759682" />
-    <state x="564" y="59" width="670" height="676" key="search.everywhere.popup" timestamp="1578825884944">
+    <state width="745" height="223" key="GridCell.Tab.0.bottom" timestamp="1579024421775">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="564" y="59" width="670" height="676" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1578825884944" />
+    <state width="745" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1579024421775" />
+    <state width="745" height="223" key="GridCell.Tab.0.center" timestamp="1579024421774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="745" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1579024421774" />
+    <state width="745" height="223" key="GridCell.Tab.0.left" timestamp="1579024421774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="745" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1579024421774" />
+    <state width="745" height="223" key="GridCell.Tab.0.right" timestamp="1579024421775">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="745" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1579024421775" />
+    <state x="566" y="59" width="672" height="676" key="search.everywhere.popup" timestamp="1579017231659">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="566" y="59" width="672" height="676" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1579017231659" />
   </component>
 </project>

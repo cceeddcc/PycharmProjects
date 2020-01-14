@@ -5,39 +5,11 @@ import win32com.client
 import pandas as pd
 import time
 import sqlite3
+import os
+
 import Cybos_function
-Cybos_function.get_login_status()
-
-# 연결상태 확인 1: 연결, 0: 비연결
-instCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
-if instCpCybos.IsConnect != 1:
-    print("CybosPlus가 연결되어있지 않습니다.")
-    exit()
-else :
-    print("정상적으로 연결되었습니다.")
-
-# 종목코드 리스트 구하기
-objCpCodeMgr = win32com.client.Dispatch("CpUtil.CpCodeMgr")
-codeList = objCpCodeMgr.GetStockListByMarket(1) # 거래소
-Kospi_namelist = []
-Kospi_codelist = []
-
-# 코스피 보통주만 선별
-for code in codeList:
-    if code[-1] == "0" and objCpCodeMgr.GetStockSectionKind(code) == 1 : #주권, 보통주에 해당하는 것만 추출
-        Kospi_namelist.append(objCpCodeMgr.CodeToName(code))
-        Kospi_codelist.append(code)
-
-# 코드 저장
-for code in Kospi_codelist:
-    f = open('c:\\Users\\S\\Desktop\\code_list.txt', 'a')
-    f.write(code[1:] + '\n')
-    f.close()
-# 종목명 저장
-for name in Kospi_namelist:
-    f = open('c:\\Users\\S\\Desktop\\name_list.txt', 'a')
-    f.write(name + '\n')
-    f.close()
+Cybos_function.Get_login_status() # 로그인 확인
+Kospi_codelist, Kospi_namelist = Cybos_function.Get_KOSPI_code() # 코스피 코드리스트 가져오기
 
 # 데이터 추출
 instStockChart = win32com.client.Dispatch("CpSysDib.StockChart")
