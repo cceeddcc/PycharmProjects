@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Using_Cybos_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ETF종가.py" beforeDir="false" afterPath="$PROJECT_DIR$/ETF종가.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/수정종가가져오기.py" beforeDir="false" afterPath="$PROJECT_DIR$/수정종가가져오기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/수정종가가져오기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/임시.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/stockmod.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/stockmod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/20200112.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/20200113.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/디버깅.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/디버깅.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/재무,종가데이터합치기.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,11 +202,11 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="340" y="111" key="FileChooserDialogImpl" timestamp="1579021302627">
+    <state x="340" y="111" key="FileChooserDialogImpl" timestamp="1579158268287">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="414" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577861266120" />
-    <state x="340" y="111" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1579021302627" />
+    <state x="340" y="111" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1579158268287" />
     <state width="1505" height="188" key="GridCell.Tab.0.bottom" timestamp="1578289458685">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -273,10 +278,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="462" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1577858697651" />
-    <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579018936101">
+    <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579077656718">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1579018936101" />
+    <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1579077656718" />
     <state x="337" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577861707351">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -294,10 +299,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="539" y="146" width="700" height="530" key="recent.locations.popup/0.0.1536.824@0.0.1536.824" timestamp="1577787493040" />
-    <state x="734" y="152" width="672" height="711" key="search.everywhere.popup" timestamp="1578811786064">
+    <state x="734" y="152" width="672" height="711" key="search.everywhere.popup" timestamp="1579081740473">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="734" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1577861781906" />
-    <state x="734" y="152" width="672" height="711" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1578811786064" />
+    <state x="734" y="152" width="672" height="711" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1579081740473" />
   </component>
 </project>

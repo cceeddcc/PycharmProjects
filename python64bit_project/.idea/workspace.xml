@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72cb7a27-3d24-46a6-940d-ede38e3d558f" name="Default Changelist" comment="" />
+    <list default="true" id="72cb7a27-3d24-46a6-940d-ede38e3d558f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../python32bit_project/Using_Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/수정종가가져오기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/임시.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/재무,종가데이터합치기.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/재무,종가데이터합치기.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +27,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WEmdpYyHv2xMB5y6uzrQGK1RB4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -26,7 +39,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../파이썬코드참고" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="ServiceViewManager">
@@ -55,10 +68,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1578724275827">
+    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1579097665283">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1578724275827" />
+    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1579097665283" />
     <state x="277" y="75" key="SettingsEditor" timestamp="1578724257964">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

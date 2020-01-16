@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9210fd52-ab41-4587-a8a5-53d505b249dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python32bit_project/Using_Cybos_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python32bit_project/ETF종가.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/ETF종가.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python32bit_project/수정종가가져오기.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/수정종가가져오기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/수정종가가져오기.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/임시.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/built_in_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/built_in_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/os_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/os_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stockmod.py" beforeDir="false" afterPath="$PROJECT_DIR$/stockmod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200112.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200113.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Datetime_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/Datetime_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pandas_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlite_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/디버깅.py" beforeDir="false" afterPath="$PROJECT_DIR$/디버깅.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/재무,종가데이터합치기.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,10 +109,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="228" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1578813974322" />
-    <state x="527" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578814236886">
+    <state x="527" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579163298064">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="527" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1578814236886" />
+    <state x="527" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1579163298064" />
     <state x="504" y="108" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578814813067">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -116,10 +121,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="862" y="100" width="581" height="670" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1579010528882" />
-    <state x="554" y="117" key="FileChooserDialogImpl" timestamp="1578906759682">
+    <state x="554" y="117" key="FileChooserDialogImpl" timestamp="1579158720298">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="554" y="117" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1578906759682" />
+    <state x="554" y="117" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1579158720298" />
     <state width="745" height="223" key="GridCell.Tab.0.bottom" timestamp="1579024421775">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -136,9 +141,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="745" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1579024421775" />
-    <state x="566" y="59" width="672" height="676" key="search.everywhere.popup" timestamp="1579017231659">
+    <state x="566" y="59" width="672" height="676" key="search.everywhere.popup" timestamp="1579163816237">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="566" y="59" width="672" height="676" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1579017231659" />
+    <state x="566" y="59" width="672" height="676" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1579163816237" />
   </component>
 </project>

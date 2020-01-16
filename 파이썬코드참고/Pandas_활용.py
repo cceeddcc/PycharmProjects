@@ -128,6 +128,9 @@ df2.reindex(date_index2, method='bfill') # missing data에 가장 이전의 유�
 
 df1.dropna(how='any') # missing data를 갖고 있는 행은 모두 drop
 df1.fillna(value=5) # NaN 값을 해당 value로 바꿔줌
+df1.fillna(method="pad") # missing data를 forward 방식으로 유효한 값 채움
+df1.fillna(method="bfill") # missing data를 backward 방식으로 유효한 값 채움
+
 pd.isna(df1) # NaN값에 대해 T/F 검정
 
 # Operations
