@@ -80,12 +80,14 @@ for code in code_list :
         df_finance1 = pd.read_csv("C:\\Users\\S\\Desktop\\바탕화면(임시)\\KOSPI재무\\"+ code + ".csv", encoding="euc-kr")
         df_finance2 = pd.read_csv("C:\\Users\\S\\Desktop\\바탕화면(임시)\\KOSPI재무2\\"+ code + ".csv", encoding="euc-kr")
         df_finance_merge = pd.merge(df_finance1,df_finance2)
+
         columns = ["Date","Price","Asset","Capital","Sales","Operating","Profit","Retention","CFO","CFI","CFF",
                    "Op_Margin","Liability","Sa_Margin","non-operating","COGS","SGA","EBIT","NetCF",
                    'BPS', 'CFPS', 'PSR', 'PER', 'SPS', 'div_rate', 'PBR', 'EBITDA','EPS', "EV/EB",
                    'PayoutRatio', 'Return', 'DPS', 'PCR']
                 # 날짜, 주가, 자산, 자본, 매출액, 영업이익, 당기순이익,
         df_finance_merge.columns = columns
+        df_finance_merge = df_finance_merge[~df_finance_merge["Date"].isna()]
 
         # 데이터 형식 float으로 모두 변환
         for col in df_finance_merge.columns :
@@ -168,6 +170,6 @@ con2.close()
 
 
 # error_code 저장
-error_code
+
 with open("c:/Users/S/Desktop/바탕화면(임시)/KOSPI/tmp/error_code.txt", "w") as f:
     [f.write(lines + "\n") for lines in error_code]

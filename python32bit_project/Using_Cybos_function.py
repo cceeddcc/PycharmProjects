@@ -30,28 +30,4 @@ Cybos_function.Get_KOSPI_Data(*Kospi_codelist,SDate=20091127,EDate=20200115,DBna
 # Cybos_function.Get_KOSPI_Data(*Kospi_codelist,SDate=19600101,EDate=19641231,DBname="KOSPI_Price_DB11")
 
 # 코스피 데이터 업데이트
-Cybos_function.Update_KOSPI_Data(*Kospi_codelist,DBname="KOSPI_Price_DB")
-
-
-
-
-
-
-
-
-
-
-
-
-
-s = pd.Series(df,index=index)
-s.head()
-
-s["동화약품"]
-
-
-
-
-
-
-
+error_codelist = Cybos_function.Update_KOSPI_Data(*Kospi_codelist,DBname="KOSPI_PriceFinance_DB")

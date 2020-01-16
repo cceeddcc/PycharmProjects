@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Using_Cybos_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/수정종가가져오기.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/임시.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Using_Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Using_Cybos_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/20200112.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/20200113.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/KOSPI_PriceFinance_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/KOSPI_PriceFinance_DB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../파이썬코드참고/디버깅.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/디버깅.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/재무,종가데이터합치기.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +38,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../파이썬코드참고" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
   </component>
   <component name="RecentsManager">

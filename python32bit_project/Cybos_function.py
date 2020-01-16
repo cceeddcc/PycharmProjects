@@ -7,7 +7,7 @@ import pandas as pd
 
 KOSPI_codelist = []
 KOSPI_namelist = []
-
+error_codelist = []
 def Get_login_status() :
     """
     연결상태 확인 
@@ -17,7 +17,7 @@ def Get_login_status() :
     if instCpCybos.IsConnect != 1:
         print("CybosPlus가 연결되어있지 않습니다.")
         os.startfile("C:\\Users\\S\\Desktop\\CybosPlus.lnk")
-        return exit()
+        pass
     else:
         return "정상적으로 연결되었습니다."
 
@@ -41,7 +41,8 @@ def Get_KOSPI_code():
         return KOSPI_codelist, KOSPI_namelist
 
     except :
-        return "오류"
+        print("오류")
+        pass
 
 
 
@@ -54,7 +55,7 @@ def Get_KOSPI_Data(*code_list,SDate,EDate,DBname):
     :return: 코스피 주가관련 데이터 반환
     """
     instStockChart = win32com.client.Dispatch("CpSysDib.StockChart")
-    con = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/" + DBname + ".db")  # sqlite 연결 db 객체 생성
+    con = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/" + DBname + ".db")  # sqlite 연결 db 객체 생성
     i = 1
     try :
         for code in code_list:
@@ -111,7 +112,7 @@ def Get_KOSPI_Data(*code_list,SDate,EDate,DBname):
 
     except :
         print("오류")
-        return exit()
+        pass
 
     con.close()
     return "정상적으로 완료했습니다."
@@ -120,23 +121,25 @@ def Get_KOSPI_Data(*code_list,SDate,EDate,DBname):
 
 def Update_KOSPI_Data(*code_list, DBname):
     instStockChart = win32com.client.Dispatch("CpSysDib.StockChart")
-    con = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/" + DBname + ".db")
+    con = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/" + DBname + ".db")
     cur = con.cursor()
     CDate = int(datetime.today().strftime("%Y%m%d"))
+    global error_codelist
 
-    try:
-        i = 1
-
-        for code in code_list:
+    i = 1
+    for code in code_list:
+        try:
             print((i), "/", len(code_list))
+            i += 1
             code = "A" + code
             cur.execute('select Date from %s' % code)
-            SDate = datetime.strptime(cur.fetchall()[-1][0], "%Y%m%d") + timedelta(days=+1)
+            a = cur.fetchall()[-1][0].split(" ")[0].replace("-","")
+            SDate = datetime.strptime(a, "%Y%m%d") + timedelta(days=+1)
             SDate = int(SDate.strftime("%Y%m%d"))
 
-            if SDate > CDate :
-                print("오류 : " + code +" 시작날짜가 오늘날짜보다 큽니다.")
-                i += 1
+            if SDate >= CDate :
+                print("오류 : " + code +" 시작날짜가 오늘날짜와 같거나 큽니다.")
+                error_codelist.append(code)
                 continue
 
             else:
@@ -153,7 +156,7 @@ def Update_KOSPI_Data(*code_list, DBname):
                 Kospi_Data = []
 
                 for j in range(numData):
-                    Date=str(instStockChart.GetDataValue(0, j))
+                    Date=datetime.strptime(str(instStockChart.GetDataValue(0, j)), "%Y%m%d")
                     Open=instStockChart.GetDataValue(1, j)
                     High=instStockChart.GetDataValue(2, j)
                     Low=instStockChart.GetDataValue(3, j)
@@ -161,20 +164,26 @@ def Update_KOSPI_Data(*code_list, DBname):
                     Volume=instStockChart.GetDataValue(5, j)
                     Transaction=instStockChart.GetDataValue(6, j)
                     ShareNum=instStockChart.GetDataValue(7, j)
-                    row = (Date, Open, High, Low, Close, Volume, Transaction, ShareNum)
-                    Kospi_Data.append(row)
+                    row = (Date, Open, High, Low, Close, Volume, Transaction, ShareNum, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None)
+                    try :
+                        if Kospi_Data[0][0] == row[0] :
+                            continue
+                        else : Kospi_Data.append(row)
+                    except :
+                        Kospi_Data.append(row)
+                        continue
 
                 Kospi_Data.reverse()
-                cur.executemany("insert into %s values (?, ?, ?, ?, ?, ?, ?, ?)" %code, Kospi_Data)
+                cur.executemany("insert into %s values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" %code, Kospi_Data)
                 con.commit()
-                i += 1
 
-        con.close()
-        return "정상적으로 완료했습니다."
+        except:
+            print(code + "오류")
+            error_codelist.append(code)
+            continue
+    con.close()
+    return error_codelist
 
-    except:
-        print("오류")
-        return exit()
 
 
 
@@ -183,4 +192,3 @@ if __name__ == "__main__" :
     Get_KOSPI_code()
     print(__name__)
 
-del os
