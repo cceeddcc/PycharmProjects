@@ -135,7 +135,7 @@ pd.isna(df1) # NaN값에 대해 T/F 검정
 
 # Operations
 """
-기본적으로 missing data는 제외하고 계산등을 수행함 
+기본적으로 missing data는 제외하고 계산등을ㄱ 수행함 
 """
 # 통계량
 df.mean()
@@ -235,8 +235,18 @@ pieces = [df[:3], df[3:7], df[7:]] # list객체 생성
 pd.concat(pieces) # 이어 붙이는 기능
 
 
-
-
+# DataFrame.transpose(self, *args, **kwargs)
+"""
+행과 열 방향 바꾸기 Transpose
+"""
+d2 = {'name': ['Alice', 'Bob'],
+      'score': [9.5, 8],
+      'employed': [False, True],
+      'kids': [0, 0]}
+df2 = pd.DataFrame(data=d2)
+df2
+df2_transposed = df2.T # or df2.transpose()
+df2_transposed
 
 # Join
 left = pd.DataFrame({'key': ['foo', 'foo'], 'lval': [1, 2]}) ;left

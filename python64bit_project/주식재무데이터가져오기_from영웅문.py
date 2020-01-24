@@ -29,21 +29,3 @@ for code_name in code_list:
     time.sleep(0.5)
     pyautogui.click(x=757, y=594)
     time.sleep(0.5)
-
-#
-# # missing code 찾기 !
-# import os
-# # os.getcwd() # 현재 코드 실행 경로 확인
-# # os.listdir(_) # 해당 경로에 해당하는 파일 및 디렉토리 리스트
-# #
-# # 사용예시
-# mylist = os.listdir('C:\\Users\\S\\Desktop\\바탕화면(임시)\\KOSPI재무')
-# mylist2 = []
-# for x in mylist :
-#     mylist2.append(x.split(".")[0])
-#
-# missingcode =[]
-# for test in code_list:
-#     if not test in mylist2 :
-#         missingcode.append(test)
-#

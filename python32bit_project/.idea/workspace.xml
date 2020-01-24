@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../python64bit_project/디버깅.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ETF종가.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Using_Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Using_Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python64bit_project/주식재무데이터가져오기_from영웅문.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/주식재무데이터가져오기_from영웅문.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/KOSPI_PriceFinance_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/KOSPI_PriceFinance_DB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/디버깅.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/디버깅.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/20200116.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/20200116.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/KOSPI_PriceFinance_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/KOSPI_PriceFinance_DB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/디버깅.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

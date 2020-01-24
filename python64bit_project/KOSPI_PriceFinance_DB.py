@@ -10,7 +10,7 @@ with open("C:\\Users\\S\\Desktop\\바탕화면(임시)\\KOSPI\\KOSPI_namelist.tx
 
 
 """
-데이터 베이스 merge
+데이터 베이스 merge adj
 """
 import sqlite3
 import pandas as pd
@@ -22,24 +22,30 @@ con4 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_
 con5 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB5.db")
 con6 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB6.db")
 con7 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB7.db")
-con_merge = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB_merge.db")
+con8 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB8.db")
+con9 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB9.db")
+con_merge_adj = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB_merge_adj.db")
 
 i = 1
 for code in code_list :
-    print(i," / ",len(code_list))
-    i += 1
-    code = "A" + code
-    df1 = pd.read_sql("SELECT * FROM %s" %code, con1, index_col=None)
-    df2 = pd.read_sql("SELECT * FROM %s" %code, con2, index_col=None)
-    df3 = pd.read_sql("SELECT * FROM %s" %code, con3, index_col=None)
-    df4 = pd.read_sql("SELECT * FROM %s" %code, con4, index_col=None)
-    df5 = pd.read_sql("SELECT * FROM %s" %code, con5, index_col=None)
-    df6 = pd.read_sql("SELECT * FROM %s" %code, con6, index_col=None)
-    df7 = pd.read_sql("SELECT * FROM %s" %code, con7, index_col=None)
+    try :
+        print(i," / ",len(code_list))
+        i += 1
+        code = "A" + code
+        df1 = pd.read_sql("SELECT * FROM %s" %code, con1, index_col=None)
+        df2 = pd.read_sql("SELECT * FROM %s" %code, con2, index_col=None)
+        df3 = pd.read_sql("SELECT * FROM %s" %code, con3, index_col=None)
+        df4 = pd.read_sql("SELECT * FROM %s" %code, con4, index_col=None)
+        df5 = pd.read_sql("SELECT * FROM %s" %code, con5, index_col=None)
+        df6 = pd.read_sql("SELECT * FROM %s" %code, con6, index_col=None)
+        df7 = pd.read_sql("SELECT * FROM %s" %code, con7, index_col=None)
+        df8 = pd.read_sql("SELECT * FROM %s" %code, con8, index_col=None)
+        df9 = pd.read_sql("SELECT * FROM %s" %code, con9, index_col=None)
 
-    df_merge = pd.concat([df7,df6,df5,df4,df3,df2,df1])
-    df_merge.index = range(len(df_merge["Date"]))
-    df_merge.to_sql(code, con_merge, index = False)
+        df_merge = pd.concat([df9,df8,df7,df6,df5,df4,df3,df2,df1])
+        df_merge.index = range(len(df_merge["Date"]))
+        df_merge.to_sql(code, con_merge_adj, index = False)
+    except : continue
 
 
 con1.close()
@@ -49,8 +55,91 @@ con4.close()
 con5.close()
 con6.close()
 con7.close()
-con_merge.close()
+con8.close()
+con9.close()
+con_merge_adj.close()
 
+
+"""
+데이터 베이스 merge noadj
+"""
+import sqlite3
+import pandas as pd
+
+con1 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB11.db")
+con2 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB22.db")
+con3 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB33.db")
+con4 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB44.db")
+con5 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB55.db")
+con6 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB66.db")
+con7 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB77.db")
+con8 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB88.db")
+con9 = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB99.db")
+con_merge_noadj = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB_merge_noadj.db")
+
+i = 1
+for code in code_list :
+    try :
+        print(i," / ",len(code_list))
+        i += 1
+        code = "A" + code
+        df1 = pd.read_sql("SELECT * FROM %s" %code, con1, index_col=None)
+        df2 = pd.read_sql("SELECT * FROM %s" %code, con2, index_col=None)
+        df3 = pd.read_sql("SELECT * FROM %s" %code, con3, index_col=None)
+        df4 = pd.read_sql("SELECT * FROM %s" %code, con4, index_col=None)
+        df5 = pd.read_sql("SELECT * FROM %s" %code, con5, index_col=None)
+        df6 = pd.read_sql("SELECT * FROM %s" %code, con6, index_col=None)
+        df7 = pd.read_sql("SELECT * FROM %s" %code, con7, index_col=None)
+        df8 = pd.read_sql("SELECT * FROM %s" %code, con8, index_col=None)
+        df9 = pd.read_sql("SELECT * FROM %s" %code, con9, index_col=None)
+
+        df_merge = pd.concat([df9,df8,df7,df6,df5,df4,df3,df2,df1])
+        df_merge.index = range(len(df_merge["Date"]))
+        df_merge.to_sql(code, con_merge_noadj, index = False)
+    except : continue
+
+
+con1.close()
+con2.close()
+con3.close()
+con4.close()
+con5.close()
+con6.close()
+con7.close()
+con8.close()
+con9.close()
+con_merge_noadj.close()
+
+
+"""
+데이터 베이스 merge2
+"""
+import sqlite3
+import pandas as pd
+
+con_merge_adj = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB_merge_adj.db")
+con_merge_noadj = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB_merge_noadj.db")
+con_merge = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/KOSPI_Price_DB_merge.db")
+
+
+i = 1
+for code in code_list :
+    try :
+        # code = "000020"
+        print(i," / ",len(code_list))
+        i += 1
+        code = "A" + code
+        df1 = pd.read_sql("SELECT * FROM %s" %code, con_merge_adj, index_col=None)
+        df2 = pd.read_sql("SELECT * FROM %s" %code, con_merge_noadj, index_col=None)
+        df1["Date"] = pd.to_datetime(df1["Date"].astype(str))
+        df2["Date"] = pd.to_datetime(df2["Date"].astype(str))
+        df_merge = pd.merge(df1, df2, on='Date')  # outer join
+        df_merge.index = range(len(df_merge["Date"]))
+        df_merge.to_sql(code, con_merge, index = False)
+    except : continue
+con_merge_adj.close()
+con_merge_noadj.close()
+con_merge.close()
 
 """
 최종작업
@@ -85,7 +174,6 @@ for code in code_list :
                    "Op_Margin","Liability","Sa_Margin","non-operating","COGS","SGA","EBIT","NetCF",
                    'BPS', 'CFPS', 'PSR', 'PER', 'SPS', 'div_rate', 'PBR', 'EBITDA','EPS', "EV/EB",
                    'PayoutRatio', 'Return', 'DPS', 'PCR']
-                # 날짜, 주가, 자산, 자본, 매출액, 영업이익, 당기순이익,
         df_finance_merge.columns = columns
         df_finance_merge = df_finance_merge[~df_finance_merge["Date"].isna()]
 
@@ -170,6 +258,5 @@ con2.close()
 
 
 # error_code 저장
-
 with open("c:/Users/S/Desktop/바탕화면(임시)/KOSPI/tmp/error_code.txt", "w") as f:
     [f.write(lines + "\n") for lines in error_code]
