@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9210fd52-ab41-4587-a8a5-53d505b249dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../python64bit_project/디버깅.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python32bit_project/ETF종가.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python32bit_project/Using_Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/Using_Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python64bit_project/주식재무데이터가져오기_from영웅문.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/주식재무데이터가져오기_from영웅문.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20200116.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/20200116.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KOSPI_PriceFinance_DB.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/KOSPI_PriceFinance_DB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pandas_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/디버깅.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/regex_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/regex_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/웹크롤링_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/웹크롤링_활용.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python32bit_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">

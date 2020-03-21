@@ -193,10 +193,20 @@ person(**d) # unpacking
 "My name is {}".format("하림")
 "{} x {} = {}".format(2,3,2*3)
 "{2} x {0} = {1}".format(3,2*3,2) # 순서 지정 가능
-
+"{0:.4f}".format(0.12345) # 소수점 4째자리 까지 나타냄 
 
 # PEP8
 """
 일관된 코딩작성방법과 관련된 문서 
 https://b.luavis.kr/python/python-convention  한글버전 
 """
+
+# assert
+"""
+코드를 점검하는데 사용된다.
+assert 조건문
+만약 조건문이 True이면 아무런 행동을 하지 않고
+False이면 assertion error를 발생시킨다.
+"""
+assert 1==1
+assert 1==2

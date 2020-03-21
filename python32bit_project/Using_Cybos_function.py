@@ -1,10 +1,22 @@
+import win32com.client
+import os
 import Cybos_function
+
+os.getcwd()
+os.chdir("C:/Users/S/Desktop/")
 
 # 로그인 확인
 Cybos_function.Get_login_status()
 
 # 코스피 코드 및 종목명 리스트 가져오기
 Kospi_codelist, Kospi_namelist= Cybos_function.Get_KOSPI_code()
+
+# 코스피 산업코드 구분 txt파일로 저장
+with open("C:\\Users\\S\\Desktop\\바탕화면(임시)\\KOSPI\\KOSPI_Industrylist.txt", "w") as f :
+    for code in Kospi_codelist :
+        code = "A" + code
+        f.write(code + "," + Cybos_function.Get_KOSPI_Industry(code) + "\n")
+
 
 # 코스피 코드 및 종목명 txt파일로 저장
 with open("C:\\Users\\S\\Desktop\\바탕화면(임시)\\KOSPI\\KOSPI_codelist.txt", "w") as f :

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/python64bit_project.iml" filepath="$PROJECT_DIR$/.idea/python64bit_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../파이썬코드참고/.idea/파이썬코드참고.iml" filepath="$PROJECT_DIR$/../파이썬코드참고/.idea/파이썬코드참고.iml" />
     </modules>
   </component>
 </project>

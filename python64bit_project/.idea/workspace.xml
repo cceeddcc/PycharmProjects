@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72cb7a27-3d24-46a6-940d-ede38e3d558f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../python32bit_project/Using_Cybos_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/2020123.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python32bit_project/수정종가가져오기.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python32bit_project/임시.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python32bit_project/Using_Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python32bit_project/Using_Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python64bit_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python64bit_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200116.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200117.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200119.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20200124.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/웹파일다운로드.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Datetime_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/재무,종가데이터합치기.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/재무,종가데이터합치기.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pyautogui_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Pyautogui_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/numpy_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/numpy_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/regex_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/regex_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/데이터 시각화_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/데이터 시각화_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/웹크롤링_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/웹크롤링_활용.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,16 +42,24 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1WEmdpYyHv2xMB5y6uzrQGK1RB4" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../파이썬코드참고" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\S\PycharmProjects\python64bit_project" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -68,13 +87,17 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1579097665283">
+    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1584719551082">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1579097665283" />
+    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1584719551082" />
     <state x="277" y="75" key="SettingsEditor" timestamp="1578724257964">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="75" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1578724257964" />
+    <state x="809" y="89" width="672" height="676" key="search.everywhere.popup" timestamp="1580382540011">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="809" y="89" width="672" height="676" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1580382540011" />
   </component>
 </project>

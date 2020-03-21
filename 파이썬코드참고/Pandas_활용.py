@@ -396,6 +396,28 @@ pd.read_csv('foo.csv', encoding="euc-kr") # csv 파일 읽기, 한국어가 들�
 df.to_excel('foo.xlsx', sheet_name='Sheet1') # Excel 쓰기
 pd.read_excel('foo.xlsx', 'Sheet1', index_col=None, na_values=['NA']) # Excel 읽기
 
+
+# Excel 여러 sheet에 저장
+df1 = pd.DataFrame([['a', 'b'],
+                    ['c', 'd']],
+                   index=['row 1', 'row 2'],
+                   columns=['col 1', 'col 2'])
+
+df1.to_excel("C:/Users/S/Desktop/output.xlsx",
+             sheet_name='Sheet_name_1') # sheet 이름 지정
+
+df2 = df1.copy()
+with pd.ExcelWriter('output.xlsx') as writer: # engine이 필요한 경우 engine="xlsxwriter"
+    df1.to_excel(writer, sheet_name='Sheet_name_1')
+    df2.to_excel(writer, sheet_name='Sheet_name_2')
+
+
+with pd.ExcelWriter('output.xlsx',
+                    mode='a') as writer: # append 모드
+    df.to_excel(writer, sheet_name='Sheet_name_3')
+
+
+
 # Pandas_datareader
 """
 야후, 구글에서 데이터 주식 데이터 파싱

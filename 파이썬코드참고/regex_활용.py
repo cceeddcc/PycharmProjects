@@ -1,122 +1,81 @@
 import re
 """
 정규표현식 regular expression
-"""
-
-"""
-[자주 사용하는 문자 클래스]
-[0-9] 또는 [a-zA-Z] 등은 무척 자주 사용하는 정규 표현식이다. 이렇게 자주 사용하는 정규식은 별도의 표기법으로 표현할 수 있다.
-
-\d - 숫자와 매치, [0-9]와 동일한 표현식이다.
-\D - 숫자가 아닌 것과 매치, [^0-9]와 동일한 표현식이다.
-\s - whitespace 문자와 매치, [ \t\n\r\f\v]와 동일한 표현식이다. 맨 앞의 빈 칸은 공백문자(space)를 의미한다.
-\S - whitespace 문자가 아닌 것과 매치, [^ \t\n\r\f\v]와 동일한 표현식이다.
-\w - 문자+숫자(alphanumeric)와 매치, [a-zA-Z0-9_]와 동일한 표현식이다.
-\W - 문자+숫자(alphanumeric)가 아닌 문자와 매치, [^a-zA-Z0-9_]와 동일한 표현식이다.
-대문자로 사용된 것은 소문자의 반대임을 추측할 수 있다.
-"""
-
-
-# Dot(.) : 정규 표현식의 메타 문자는 줄바꿈 문자인 \n을 제외한 모든 문자와 매치됨
-"""
-a.b  :  "." 을 모든 문자에 대응해서 인식
-a[.]b  : "." 문자그대로 인식
-"""
-# 반복 (*) : *은 * 바로 앞에 있는 문자가 0부터 무한대로 반복될 수 있다는 의미이다.
-# 반복 (+) : +은 + 바로 앞에 있는 문자가 1부터 무한대로 반복될 수 있다는 의미이다.
-# 반복 ({m,n}) : {}사이에 반복을 원하는 횟수 지정
-"""
-{ } 메타 문자를 사용하면 반복 횟수를 고정할 수 있다. 
-{m, n} 정규식을 사용하면 반복 횟수가 m부터 n까지 매치할 수 있다. 또한 m 또는 n을 생략할 수도 있다. 
-만약 {3,}처럼 사용하면 반복 횟수가 3 이상인 경우이고 {,3}처럼 사용하면 반복 횟수가 3 이하를 의미한다. 
-생략된 m은 0과 동일하며, 생략된 n은 무한대(2억 개 미만)의 의미를 갖는다.
-
-ca{2,5}t # "c + a(2~5회 반복) + t"
-"""
-
-# 반복 (?)
-"""
-반복은 아니지만 이와 비슷한 개념으로 ? 이 있다. ? 메타문자가 의미하는 것은 {0, 1} 이다.
-ab?c # a + b(있어도 되고 없어도 된다) + c
+https://devanix.tistory.com/296 참고
 
 """
 
-# ^, $
+### 반복 메타 문자
 """
-^는 문자열의 처음을 의미하고, $는 문자열의 마지막을 의미한다. 
-예를 들어 정규식이 ^python인 경우 문자열의 처음은 항상 python으로 시작해야 매치되고, 
-만약 정규식이 python$이라면 문자열의 마지막은 항상 python으로 끝나야 매치된다는 의미이다.
-"""
-
-# 활용 메서드
-"""
-match()	    문자열의 처음부터 정규식과 매치되는지 조사한다.
-search()	문자열 전체를 검색하여 정규식과 매치되는지 조사한다.
-findall()	정규식과 매치되는 모든 문자열(substring)을 리스트로 돌려준다.
-finditer()	정규식과 매치되는 모든 문자열(substring)을 반복 가능한 객체로 돌려준다.
-"""
-import re
-p = re.compile('[a-z]+')
-
-# match()
-m = p.match("python")
-print(m)
-
-m = p.match("3 python")
-print(m) # 처음 나오는 3이 조건에 부합하지 않아 None
-
-# search()
-m = p.search("python")
-print(m)
-
-m = p.search("3 python")
-print(m) # match와 비교
-
-# findall()
-result = p.findall("life is too short")
-print(result) # 리스트로 반환
-
-# finditer()
-result = p.finditer("life is too short")
-print(result) # 매치된 단어들을 각각 매치타입으로 반복가능하게 반환
-for r in result: print(r)
-
-
-# 매치된 객체에 대한 메서드
-"""
-group()	매치된 문자열을 돌려준다.
-start()	매치된 문자열의 시작 위치를 돌려준다.
-end()	매치된 문자열의 끝 위치를 돌려준다.
-span()	매치된 문자열의 (시작, 끝)에 해당하는 튜플을 돌려준다.
+*  :  0회 이상 반복 
++  :  1회 이상 반복 
+?  :  0회 or 1회
+{m}  :  m회 반복
+{m, n}  :  m회부터 n회까지 반복 
 """
 
-m = p.match("python")
-m.group()
-m.start()
-m.end()
-m.span()
-
-m = p.search("3 python")
-m.group()
-m.start()
-m.end()
-m.span()
-
-# 축약형태
-p = re.compile('[a-z]+')
-m = p.match("python")
-
-m = re.match('[a-z]+', "python") # 위와 같은 표현
-
-# 컴파일 옵션
+### 매칭 메타 문자
 """
-DOTALL(S) - "."이 줄바꿈 문자를 포함하여 모든 문자와 매치할 수 있도록 한다.
-IGNORECASE(I) - 대소문자에 관계없이 매치할 수 있도록 한다.
-MULTILINE(M) - 여러줄과 매치할 수 있도록 한다. (^, $ 메타문자의 사용과 관계가 있는 옵션이다)
-VERBOSE(X) - verbose 모드를 사용할 수 있도록 한다. (정규식을 보기 편하게 만들수 있고 주석등을 사용할 수 있게된다.)
+.  :  줄바꿈 문자(\n)를 제외한 모든 문자와 매치됨
+^  :  문자열의 시작과 매치됨, [^패턴]은 해당 패턴이외의 모든 것을 의미함
+$  :  문자열의 마지막과 매치됨
+[ ]  :  여러 문자 중 각각 한 문자를 의미
+|  :  또는(or)를 의미
+{ }  :  정규식을 그룹으로 묶음
 """
 
-# DOTALL
+### 이스케이프 기호
+"""
+\\  :  역슬래쉬 문자 자체
+\d  :  모든 숫자와 매치됨 [0-9]
+\D  :  숫자가 아닌 문자와 매치됨 [^0-9]
+\s  :  화이트 스페이스 문자와 매치됨 [ \t\n\r\f\v]
+\S  :  화이트 스페이스가 아닌 것과 매치됨 [^ \t\n\r\f\v]
+\w  :  숫자 또는 문자와 매치됨 [a-zA-Z0-9_]
+\W  :  숫자 또는 문자가 아닌 것과 매치됨 [^a-zA-Z0-9_]
+\b  :  단어의 경계를 나타냄. 단어는 영문자 혹은 숫자의 연속 문자열
+\B  :  단어의 경계가 아님을 나타냄
+\A  :  문자열의 처음에만 일치
+\Z  :  문자열의 끝에만 일치
+"""
+
+### 최소 매칭을 위한 정규식
+"""
+*?  :  *와 같으나 문자열을 최소로 매치함
++?  :  +와 같으나 문자열을 최소로 매치함
+??  :  ?와 같으나 문자열을 최소로 매치함
+{m,n}?  :  {m,n}과 같으나 문자열을 최소로 매치함
+"""
+
+### 정규 표현식에서 가용 가능한 플래그
+"""
+I, IGNORECASE	:  대, 소문자를 구별하지 않는다
+L, LOCATE	    :  \w, \W, \b, \B를 현재의 로케일에 영향을 받게 한다
+M, MULTILINE	:  ^가 문자열의 맨 처음, 각 라인의 맨 처음과 매치 된다 
+	               $는 문자열의 맨 끝, 각 라인의 맨 끝과 매치
+S, DOTALL	    :  .을 줄바꾸기 문자도 포함하여 매치하게 한다
+U, UNICODE	    :  \w, \W, \b, \B가 유니코드 문자 특성에 의존하게 한다
+X, VERBOSE    	:  정규식 안의 공백은 무시된다
+"""
+
+## IGNORECASE
+s = "Apple is a big company and apple is very delicious"
+c = re.compile("apple", re.I) # Ignorecase 대소문자 구분 안함
+c.findall(s)
+
+
+## MULTILINE
+s = """window
+unix
+linux
+solaris
+"""
+c = re.compile("^.+") # 첫 라인만 매칭
+c.findall(s)
+c = re.compile("^.+", re.M) # Multiline 설정
+c.findall(s)
+
+## DOTALL
 p = re.compile('a.b')
 m = p.match('a\nb')
 print(m) # 원래 "."은 \n을 매치 못 시킴
@@ -125,33 +84,11 @@ p = re.compile('a.b', re.DOTALL)
 m = p.match('a\nb')
 print(m)
 
-# IGNORECASE
-p = re.compile('[a-z]', re.I) # 대소문자 구별 안함
-p.match('python')
-p.match('Python')
-p.match('PYTHON')
-
-
-# MULTILINE
-p = re.compile("^python\s\w+")
-data = """python one
-life is too short
-python two
-you need python
-python three"""
-print(p.findall(data))
-
-p = re.compile("^python\s\w+", re.MULTILINE)
-data = """python one
-life is too short
-python two
-you need python
-python three"""
-print(p.findall(data)) # ^, $ 메타 문자를 문자열의 각 줄마다 적용
-
-# VERBOSE
+## VERBOSE
+"""
+정규식이 복잡할 경우 아래처럼 주석을 적고 여러 줄로 표현하는 것이 훨씬 가독성이 좋다
+"""
 charref = re.compile(r'&[#](0[0-7]+|[0-9]+|x[0-9a-fA-F]+);') # 이해하기 힘듦
-# 정규식이 복잡할 경우 아래처럼 주석을 적고 여러 줄로 표현하는 것이 훨씬 가독성이 좋다
 charref = re.compile(r"""
  &[#]                # end of a numeric entity reference
  (
@@ -162,14 +99,190 @@ charref = re.compile(r"""
  ;                   # Trailing semicolon
 """, re.VERBOSE)
 
-# 백슬래시(\) 문제
+
+### re모듈의 주요 메소드
+## compile(pattern[, flags])
 """
-\section 을 매칭시키려면 \s가 정규식에서 다른 의미를 가지고 있기 때문에 아래와 같이 적어야 한다.
-\\section 즉 정규식에서 사용한 \ 문자가 문자열 자체임을 알려 주기 위해 백슬래시 2개를 사용하여 이스케이프 처리를 해야 한다.
+pattern을 컴파일하여 정규식 객체를 반환
+"""
+p = re.compile('a.b')
+re.match(p, "asb")
+
+## match(pattern, string[,flags])
+"""
+string의 시작부분부터 pattern이 존재하는지 검사하여 
+MatchObject 인스턴스를 반환
+"""
+bool(re.match("[0-9]*th", "   35th"))
+bool(re.match("ap", "This is an apple"))
+
+## search(pattern, string[,flags])
+"""
+string의 전체에 대해서 pattern이 존재하는지 검사하여 
+MatchObject 인스턴스를 반환
+"""
+bool(re.search("[0-9]*th", "   35th")) # 문자열 전체에서 검색하기 때문에 Match와 차이
+bool(re.search("ap", "This is an apple"))
+
+## split(pattern, string[, maxplit=0])
+"""
+pattern을 구분자로 string을 분리하여 리스트로 반환
+"""
+# ':', '.', ' ' 문자를 구분자로 사용
+re.split("[:. ]+", "apple Orange:banana.tomato")
+re.split("([:. ])+", "apple Orange:banana.tomato") # 소괄호 사용시 분리 문자도 결과에 포함
+re.split("[:. ]+", "apple Orange:banana.tomato",maxsplit=2 ) # 최대 분리 횟수 지정
+
+## findall(pattern, string[, flags])
+"""
+string에서 pattern을 만족하는 문자열을 리스트로 반환
+"""
+re.findall(r"app\w*", "application orange apple banana app")
+
+p = re.compile(r"app\w*") # 정규식을 객체에 저장해서 활용
+p.findall("application orange apple banana app")
+
+## finditer(pattern, string[, flags])
+"""
+string에서 pattern을 만족하는 문자열을 반복자로 반환
+"""
+p = re.compile("\w+")
+result = p.finditer("life is too short")
+print(result) # 매치된 단어들을 각각 매치타입으로 반복가능하게 반환
+for r in result: print(r)
+
+
+## sub(pattern, repl, string[, count=0])
+"""
+string에서 pattern과 일치하는 부분에 대하여 repl(replace)로 
+교체하여 결과 문자열을 반환
+"""
+re.sub("-","@", "901225-1234567")
+re.sub(r"[:,|\s]", ", ", "Apple:Orange Banana|Tomato,Grape") # 필드 구분자 통일
+re.sub(r"[:,|\s]", ", ", "Apple:Orange Banana|Tomato,Grape", count=2) # 횟수 제한
+
+# 변경할 문자열을 패턴으로 매칭시켜 찾아서 변경
+# 매칭시킬 패턴 중 변경할 문자열에 사용할 부분에 대해 소괄호로 감싸준다.
+re.sub(r"\b(\d{4}-\d{4})\b", r"<I>\1</I>","Copyright Derick 1990-2009")
+
+# 매칭시킬 패턴에 명시적으로 이름을 지정(?P<패턴이름>패턴)
+# 변경할 문자열에서 패턴이름 사용 \g<패턴이름>
+re.sub(r"(?P<year>\d{4}-\d{4})\b",r"<I>\g<year></I>", "Copyright Derick 1990-2009")
+
+## subn(pattern, repl, string[, count=0])
+"""
+sub와 동일하나, 결과로(결과문자열, 매칭횟수)를 튜플로 반환
+"""
+
+## escape(string)
+"""
+영문자 숫자가 아닌 문자들을 백슬래쉬 처리해서 리턴. 
+(임의의 문자열을 정규식 패턴으로 사용할 경우 유용)
+"""
+
+### Match 객체
+"""
+Match객체는 match(), search()의 수행 결과로 생성되며, 
+검색된 결과를 효율적으로 처리할 수 있는 기능 제공.
+"""
+
+## group([group1, ...])
+"""
+입력받은 인덱스에 해당하는 매칭된 문자열 결과의 부분 집합을 반환합니다. 
+인덱스가 '0'이거나 입력되지 않은 경우 전체 매칭 문자열을 반환합니다.
+"""
+
+telChecker = re.compile(r"(\d{2,3})-(\d{3,4})-(\d{4})")
+m = telChecker.match("02-123-4597")
+m.group() # 매칭된 전체 문자열을 반환
+m.group(1) # 첫 번째로 매칭된 문자열
+m.group(2,3) # 해당 번째로 매칭된 문자열 튜플로 반환
+
+
+## groups()
+"""
+매칭된 결과를 튜플 형태로 반환
+"""
+m.groups() # 매칭된 문자열 집합을 튜플로 반환
+
+## start([group])
+"""
+매칭된 결과 문자열의 시작 인덱스를 반환. (인자로 부분 집합의 번호나 
+명시된 이름이 전달된 경우, 그에 해당하는 시작 인덱스를 반환)
+"""
+m.start() # 매칭된 전체 문자열의 시작 인덱스
+m.start(2) # 두번째 매칭된 문자열의 시작 인덱스
+
+
+## end([group])
+"""
+매칭된 결과 문자열의 종료 인덱스를 반환. (인자로 부분 집합의 번호나 
+명시된 이름이 전달된 경우, 그에 해당하는 종료 인덱스를 반환)
+"""
+m.end() # 매칭된 전체 문자열의 종료 인덱스
+m.end(2) # 두번째 매칭된 문자열의 종료 인덱스
+
+## span()
+"""
+매치된 문자열의 (시작, 끝)에 해당하는 튜플을 돌려준다.
+"""
+m.span()
+
+## string
+"""
+매칭의 대상이 되는 원본 문자열입니다.
+"""
+m.string
+m.string[m.start(2):m.end(3)]
+
+## groupdict()
+"""
+이름이 붙여진 매칭 결과를 사전 형태로 반환
+"""
+# 매칭 결과에 각각 이름 부여
+c = re.compile(r"(?P<area>\d+)-(?P<exchange>\d+)-(?P<user>\d+)")
+m = c.match("02-123-4567")
+m.group("area") # 이름으로 매칭된 값 가져오기
+m.start("user")
+m.groupdict() # 사전형태로 반환
+
+## pos
+"""
+원본 문자열에서 검색을 시작하는 위치입니다.
+"""
+
+## endpos
+"""
+원본 문자열에서 검색을 종료하는 위치입니다.
+"""
+
+## lastindex
+"""
+매칭된 결과 집합에서 마지막 인덱스 번호를 반환. (일치된 결과가 없는 경우 
+에는 None을 반환)
+"""
+
+## lastgroup
+"""
+매칭된 결과 집합에서 마지막으로 일치한 이름을 반환. (정규식의 매칭 조건에 
+이름이 지정되지 않았거나 일치된 결과가 없는 경우 None 반환)
+"""
+
+### 로우 문자열 표기법 (Raw string notation)
+
+"""
+백슬래시(\) 문제
+\section 을 매칭시키려면 \s가 정규식에서 다른 의미를 가지고 있기 때문에 
+아래와 같이 적어야 한다.
+\\section 즉 정규식에서 사용한 \ 문자가 문자열 자체임을 알려 주기 위해 
+백슬래시 2개를 사용하여 이스케이프 처리를 해야 한다.
 
 Raw String 규칙
 p = re.compile(r'\section')
-정규식 문자열 앞에 r 문자를 삽입하면 이 정규식은 Raw String 규칙에 의하여 백슬래시 2개 대신 1개만 써도 2개를 쓴 것과 동일한 의미를 갖게 된다.
+정규식 문자열 앞에 r 문자를 삽입하면 이 정규식은 Raw String 규칙에 의하여 
+백슬래시 2개 대신 1개만 써도 2개를 쓴 것과 동일한 의미를 갖게 된다.
 """
+bool(re.search("\\\\\w","\\apple"))
+bool(re.search(r"\\\w",r"\apple"))
 
 

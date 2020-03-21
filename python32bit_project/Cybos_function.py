@@ -4,26 +4,27 @@ import sqlite3
 from datetime import datetime, timedelta
 import time
 import pandas as pd
-os.getcwd()
 
 KOSPI_codelist = []
 KOSPI_namelist = []
 error_codelist = []
-def Get_login_status() :
+
+# 공통 함수
+def Get_login_status():
     """
-    연결상태 확인 
-    1: 연결, 0: 비연결
+    Cybos plus 로그인 상태 확인 및 연결
     """
-    instCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
-    if instCpCybos.IsConnect != 1:
+    objCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
+
+    # 1: 연결, 0: 비연결
+    if objCpCybos.IsConnect == 1:
+        return "정상적으로 연결되었습니다."
+    else:
         print("CybosPlus가 연결되어있지 않습니다.")
         os.startfile("C:\\Users\\S\\Desktop\\CybosPlus.lnk")
-        pass
-    else:
-        return "정상적으로 연결되었습니다."
 
 
-
+# 코스피 관련 함수
 def Get_KOSPI_code():
     """
     Get the KOSPI codes
@@ -45,7 +46,18 @@ def Get_KOSPI_code():
         print("오류")
         pass
 
+def Get_KOSPI_Industry(code):
+    """
+    Get the KOSPI Industry
+    """
+    try :
+        objCpCodeMgr = win32com.client.Dispatch("CpUtil.CpCodeMgr")
+        tmp_code_list = objCpCodeMgr.GetStockIndustryCode(code)
+        return tmp_code_list
 
+    except:
+        print("오류")
+    pass
 
 def Get_KOSPI_Data_adj(*code_list,SDate,EDate,DBname):
     """
@@ -138,8 +150,6 @@ def Get_KOSPI_Data_adj(*code_list,SDate,EDate,DBname):
     con.close()
     return "정상적으로 완료했습니다."
 
-
-
 def Update_KOSPI_Data(*code_list, DBname):
     instStockChart = win32com.client.Dispatch("CpSysDib.StockChart")
     con = sqlite3.connect("C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/" + DBname + ".db")
@@ -204,9 +214,6 @@ def Update_KOSPI_Data(*code_list, DBname):
             continue
     con.close()
     return error_codelist
-
-
-
 
 def Get_KOSPI_Data_noadj(*code_list,SDate,EDate,DBname):
     """
@@ -299,9 +306,77 @@ def Get_KOSPI_Data_noadj(*code_list,SDate,EDate,DBname):
 
 
 
+# ETF 분석 관련 함수
+def ETF_RequestData(Cybos_obj, ETFcode):
+    """
+    ETF 분석에 필요한 일자별 데이터 요청 실행
+    """
+    # 데이터 요청
+    Cybos_obj.SetInputValue(0, ETFcode)
+    Cybos_obj.BlockRequest()
 
-if __name__ == "__main__" :
-    Get_login_status()
-    Get_KOSPI_code()
-    print(__name__)
+    # 통신 결과 확인
+    rqStatus = Cybos_obj.GetDibStatus() # DB통신상태 (-1 : 오류, 0 : 정상, 1 : 수신대기)
+    rqMsg = Cybos_obj.GetDibMsg1() # DB통신상태 문자열
+    if rqStatus != 0:
+        print("통신상태", rqStatus, rqMsg)
+        return False
+
+def ETF_GetData(Cybos_obj, ETFcode):
+    """
+    ETF 분석에 필요한 일자별 데이터 얻기
+    :return: Dataframe타입 ETF 데이터
+    """
+    #
+    # Cybos_obj = win32com.client.Dispatch("Dscbo1.CpSvr7246") #tmp
+    # ETFcode = "225130" #tmp
+    etfDate = []
+    etfNAV = []
+    etfClose = []
+
+    # 최초 데이터 요청
+    ETF_RequestData(Cybos_obj, ETFcode)
+    count = Cybos_obj.GetHeaderValue(0)  # 수신 데이터 수
+
+    def Data_Save(startnum,endnum):
+        """
+        최초 데이터 요청과 연속데이터 요청을 분리실행으로 중복되는 코드
+        요청한 ETF 데이터를 변수에 저장해주는 기능
+        최초 데이터 요청에서 가장 최근 데이터를 빼는 문제 때문에, startnum, endnum구분했음
+        """
+        for i in range(startnum, endnum):
+            # 필요한 데이터가 다르면 수정해야하는 부분
+            date = Cybos_obj.GetDataValue(0, i)  # 날짜
+            close = Cybos_obj.GetDataValue(1, i)  # ETF종가
+            NAV = Cybos_obj.GetDataValue(6, i)  # NAV
+
+            etfDate.append(date)
+            etfClose.append(close)
+            etfNAV.append(NAV)
+    Data_Save(0, count)
+
+    # 연속 데이터 요청
+    NextCount = 1
+    while Cybos_obj.Continue:  # 연속데이터 유무(1: 연속, 0: 연속없음)
+        ETF_RequestData(Cybos_obj, ETFcode)
+        count = Cybos_obj.GetHeaderValue(0)  # 수신 데이터 수
+        Data_Save(1, count)
+        print(NextCount); NextCount += 1
+        if (NextCount > 200): # 임의값 200 수정가능
+            break
+        time.sleep(0.252) # 최대 1초에 최대 4개 조회 가능
+
+    ETF_df = pd.DataFrame({"Date": etfDate,
+                           "Close": etfClose,
+                           "NAV": etfNAV})
+    ETF_df = ETF_df.sort_values("Date")
+    return ETF_df
+
+
+
+#
+# if __name__ == "__main__" :
+#     Get_login_status()
+#     Get_KOSPI_code()
+#     print(__name__)
 

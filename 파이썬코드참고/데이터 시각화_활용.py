@@ -51,47 +51,6 @@ plt.style.use('ggplot') # ggplot style로 그리기
 df.plot(kind='barh')
 plt.style.use('default') # 기본값으로 다시 전환  그리기
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 2. seaborn
 """
 seaborn은 matplotlib을 기반으로 다양한 색 테마, 차트 기능을 추가한 라이브러리
