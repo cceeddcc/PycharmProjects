@@ -18,10 +18,11 @@ def Get_login_status():
 
     # 1: 연결, 0: 비연결
     if objCpCybos.IsConnect == 1:
-        print("정상적으로 연결되었습니다.")
+        return "정상적으로 연결되었습니다."
     else:
         print("CybosPlus가 연결되어있지 않습니다.")
         os.startfile("C:\\Users\\S\\Desktop\\CybosPlus.lnk")
+
 
 # 코스피 관련 함수
 def Get_KOSPI_code():
@@ -311,19 +312,19 @@ def Get_ETF_code_name():
     ETF 코드명과 종목명 추출
     ETF_code_list와 ETF_name_list 반환
     """
-    try:
+    try :
         objCpCodeMgr = win32com.client.Dispatch("CpUtil.CpCodeMgr")
-        code_list = objCpCodeMgr.GetStockListByMarket(1)  # 0 : 구분없음, 1 : 거래소, 2: 코스닥
+        code_list = objCpCodeMgr.GetStockListByMarket(1) # 0 : 구분없음, 1 : 거래소, 2: 코스닥
         ETF_code_list = []
-        ETF_name_list = []
-        for code in code_list:
-            if objCpCodeMgr.GetStockSectionKind(code) == 10:  # 0: 구분없음, 1: 주권, 10: ETF
+        ETF_name_list= []
+        for code in code_list :
+            if objCpCodeMgr.GetStockSectionKind(code) == 10 : # 0: 구분없음, 1: 주권, 10: ETF
                 ETF_code_list.append(code)
                 ETF_name_list.append(objCpCodeMgr.CodeToName(code))
 
         return ETF_code_list, ETF_name_list
 
-    except:
+    except :
         print("오류")
         pass
 
@@ -347,6 +348,9 @@ def ETF_GetData(Cybos_obj, ETFcode):
     ETF 분석에 필요한 일자별 데이터 얻기
     :return: Dataframe타입 ETF 데이터
     """
+    #
+    # Cybos_obj = win32com.client.Dispatch("Dscbo1.CpSvr7246") #tmp
+    # ETFcode = "225130" #tmp
     etfDate = []
     etfNAV = []
     etfClose = []
@@ -375,13 +379,13 @@ def ETF_GetData(Cybos_obj, ETFcode):
     # 연속 데이터 요청
     NextCount = 1
     while Cybos_obj.Continue:  # 연속데이터 유무(1: 연속, 0: 연속없음)
-        time.sleep(0.251) # 최대 1초에 최대 4개 조회 가능
         ETF_RequestData(Cybos_obj, ETFcode)
         count = Cybos_obj.GetHeaderValue(0)  # 수신 데이터 수
         Data_Save(1, count)
         print(NextCount); NextCount += 1
-        if (NextCount > 500): # 임의값 500 수정가능
+        if (NextCount > 200): # 임의값 200 수정가능
             break
+        time.sleep(0.252) # 최대 1초에 최대 4개 조회 가능
 
     ETF_df = pd.DataFrame({"Date": etfDate,
                            "Close": etfClose,

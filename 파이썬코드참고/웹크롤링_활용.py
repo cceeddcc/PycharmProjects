@@ -4,6 +4,9 @@ import selenium
 import re
 
 def init_ChromeDriver() :
+    """
+    ChromeDriver 생성 코드 반복사용으로 인한 함수 생성
+    """
     from selenium import webdriver
     options = webdriver.ChromeOptions() # Chromeoption 객체 생성
     options.add_argument('headless') # headless 모드 지정
