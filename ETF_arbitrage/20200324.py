@@ -224,7 +224,6 @@ def make_index(df_comparable, df_comparable_inv, CloseNAV):
                 df1["Yield2"] = result.params["Intercept"] + result.params["time"] * df1["time"]
                 df1["Cum_%s-%s" % (code1 + "C", code2 + "C")] = df1["Yield"]-df1["Yield2"]
 
-                df_Cum = pd.merge(df_Cum, df1.iloc[:, [0, -1]], on="Date", how="left")
             else:
                 # 회귀분석 파트
                 df1["Yield"] = df1["Cum_NAV_return1"] + df1["Cum_NAV_return2"] - 2
