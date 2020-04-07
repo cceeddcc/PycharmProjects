@@ -66,7 +66,7 @@ df.groupby("grade").size() # 빈 카테고리도 확인가능
 데이터 특징 보기
 """
 
-## Dataframe.head()
+# Method : Dataframe.head()
 df.head() # 상위 5개
 
 ## Dataframe.tail()
@@ -75,7 +75,10 @@ df.tail(3) # 하위 3개
 ## Dataframe.index
 df.index # index 보기
 
-## Dataframe.columns
+# Attribute : Dataframe.shape
+df.shape # dimension
+
+# Attribute :  Dataframe.columns
 df.columns # 칼럼명 보기
 
 ## Dataframe.describe()
@@ -192,6 +195,12 @@ Dataframe value에 대해 missing data가 있는지 검정 -> boolean 반환
 """
 df1.isna() # NaN값에 대해 T/F 검정
 
+# Method : Dataframe.isnull()
+"""
+Dataframe value에 대해 missing data가 있는지 검정 -> boolean 반환
+"""
+df1.isnull().sum() # nan 값 개수 체크
+
 ## DataFrame.reindex(self, labels=None, index=None, columns=None, axis=None, method=None, copy=True, level=None, fill_value=nan, limit=None, tolerance=None)
 """
 새로운 인덱스를 지정할 수 있다.
@@ -289,7 +298,7 @@ string 데이터에 적용하는 함수
 s = pd.Series(['A', 'B', 'C', 'Aaba', 'Baca', np.nan, 'CABA', 'dog', 'cat']);s
 s.str.lower() # 글자 소문자 변환
 
-## Series.value_counts()
+# Method : Series.value_counts()
 """
 중복데이터 개수 세기
 히스토그램 그리기와 동일한 개념 
@@ -355,7 +364,7 @@ df2_transposed
 
 ## DataFrame.corr()
 """
-DataFrame객체 각 열 별로 상관관계 matrix 생성
+DataFrame객체 각 열 별로 correlation matrix 생성
 """
 df = pd.DataFrame(np.random.randn(10, 4), columns=list("ABCD")) ; df
 df.corr()
@@ -364,6 +373,13 @@ df = pd.DataFrame({"A" : [1,2,3,4,5,6,7],
                    "B" : [7,6,5,4,3,2,1],
                    "C" : [np.NaN,np.NaN,1,2,3,4,5]})
 df.corr() # NaN값으로 열마다 데이터 개수가 달라도 서로 있는 데이터끼리 계산해줌
+
+## DataFrame.cov()
+"""
+DataFrame의 각 열 별로 covariance matrix 생성
+"""
+df = pd.DataFrame(np.random.randn(10, 4), columns=list("ABCD")) ; df
+df.cov()
 
 ## DataFrame.append()
 """
@@ -501,6 +517,10 @@ df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index, columns=['A', 'B', '
 df = df.cumsum()
 df.plot() # 모든 열의 데이터 plotting
 plt.legend(loc='best') # 범례표시
+
+s = pd.Series(np.random.random_integers(0, 7, size=200));s
+s = s.value_counts()
+s.plot(kind="bar") # bar chart
 
 #### Getting data in/out
 """

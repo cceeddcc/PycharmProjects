@@ -138,7 +138,7 @@ for i, value in data :
 
 ## for문, if문 리스트 내포(List comprehension)하기
 """
-[표현식 for 항목 in 반복가능객체 if 조건문]
+[표현식 for 항목 in 반복가능객체 if 조건문 else 표현식]
 """
 a = [1,2,3,4]
 result = [num * 3 for num in a]
