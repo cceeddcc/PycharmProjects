@@ -160,6 +160,5 @@ for code in df_ETF_index_code[0:10] :
 
     df_pairs.to_excel("C:/Users/S/Desktop/ma.xlsx")
 
-
-
 con.close()
+

@@ -19,17 +19,34 @@ https://matplotlib.org/index.html
 """
 print("Matplotlib version", matplotlib.__version__) # 버전확인
 
-# figure : 그래프 그리기 전 도화지
-plt.figure() # 그래프 그리기 전 도화지
+# plt.figure
+"""
+그래프 그리기 전 도화지
+"""
+plt.figure(figsize=(10,5)) # 그래프 그리기 전 도화지
 fig = plt.figure()
-dir(fig) # 사용 가능한 메서드
-fig.suptitle('figure sample plots') # 제목
-plt.subplots(3,2) # 도화지 분할 (3행 2열)
 
-# figure size 조절
+fig.suptitle('figure sample plots') # 제목
 fig.set_size_inches(10,10) # 가로 10 iniches, 세로 10 inches
-plt.figure(figsize=(5,5))
+
+# plt.rcParams
+"""
+Parameter 
+"""
 plt.rcParams['figure.figsize'] = (10,5) # parameter로 지정해서 넘길 수 있음
+
+
+
+# plt.subplots()
+"""
+(행,열,번호)
+도화지 분할 개념
+"""
+plt.subplot(2,2,1)
+plt.hist(pd.DataFrame(np.random.random(100))[0])
+plt.subplot(2,2,4)
+plt.hist(pd.DataFrame(np.random.random(100))[0])
+
 
 # Axes
 " plot이 그려지는 공간 "
