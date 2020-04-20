@@ -35,8 +35,6 @@ Parameter
 """
 plt.rcParams['figure.figsize'] = (10,5) # parameter로 지정해서 넘길 수 있음
 
-
-
 # plt.subplots()
 """
 (행,열,번호)

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ETF_arbitrage.iml" filepath="$PROJECT_DIR$/.idea/ETF_arbitrage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PairTrading/.idea/PairTrading.iml" filepath="$PROJECT_DIR$/../PairTrading/.idea/PairTrading.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Python and Statistics for Financial Analysis/.idea/Python and Statistics for Financial Analysis.iml" filepath="$PROJECT_DIR$/../Python and Statistics for Financial Analysis/.idea/Python and Statistics for Financial Analysis.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Using Machine Learning in Trading and Finance/.idea/Using Machine Learning in Trading and Finance.iml" filepath="$PROJECT_DIR$/../Using Machine Learning in Trading and Finance/.idea/Using Machine Learning in Trading and Finance.iml" />
       <module fileurl="file://$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" filepath="$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" />

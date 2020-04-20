@@ -258,13 +258,6 @@ Q-Q Plot of two samples’ quantiles.
 x = df["log_diff_12"]
 y = np.random.normal(0,1,len(df["log_diff_12"]))
 sm.qqplot_2samples(x, y)
-
-
-
-
-
-
-
 sm.qqline(ax=ax, line="q", y= df["log_diff_12"],x=None)
 
 
