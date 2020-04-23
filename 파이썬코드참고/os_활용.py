@@ -1,5 +1,8 @@
 import os
-"os 모듈은 Operating System의 약자로서 운영체제에서 제공되는 여러 기능을 파이썬에서 수행할 수 있게 해줍니다."
+"""
+os 모듈은 Operating System의 약자로서 운영체제에서 제공되는 여러 기능을
+파이썬에서 수행할 수 있게 해줍니다.
+"""
 
 dir(os) # os와 관련된 attribute, module명 확인
 

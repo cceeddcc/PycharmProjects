@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ETF_arbitrage/.idea/ETF_arbitrage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ETF_arbitrage/.idea/ETF_arbitrage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ETF_arbitrage/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ETF_arbitrage/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Using_Cybos_ETF.py" beforeDir="false" afterPath="$PROJECT_DIR$/Using_Cybos_ETF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Using_Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Using_Cybos_function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python64bit_project/20200130.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/20200319.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pyautogui_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/Pyautogui_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/built_in_활용.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/웹크롤링_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/웹크롤링_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,111 +204,25 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864@0.0.1536.864" timestamp="1584804990969" />
-    <state x="340" y="111" key="FileChooserDialogImpl" timestamp="1584772341651">
+    <state x="340" y="111" key="FileChooserDialogImpl" timestamp="1587453474512">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="414" y="158" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1577861266120" />
-    <state x="340" y="111" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1584772341651" />
-    <state width="1505" height="188" key="GridCell.Tab.0.bottom" timestamp="1578289458685">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1500" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577798310596" />
-    <state width="1505" height="188" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1578289458685" />
-    <state width="1505" height="188" key="GridCell.Tab.0.center" timestamp="1578289458684">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1500" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577798310596" />
-    <state width="1505" height="188" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1578289458684" />
-    <state width="1505" height="188" key="GridCell.Tab.0.left" timestamp="1578289458684">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1500" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577798310596" />
-    <state width="1505" height="188" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1578289458684" />
-    <state width="1505" height="188" key="GridCell.Tab.0.right" timestamp="1578289458685">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1500" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577798310596" />
-    <state width="1505" height="188" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1578289458685" />
-    <state width="1505" height="188" key="GridCell.Tab.1.bottom" timestamp="1578289458686">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1505" height="188" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1578289458686" />
-    <state width="1505" height="188" key="GridCell.Tab.1.center" timestamp="1578289458686">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1505" height="188" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1578289458686" />
-    <state width="1505" height="188" key="GridCell.Tab.1.left" timestamp="1578289458686">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1505" height="188" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1578289458686" />
-    <state width="1505" height="188" key="GridCell.Tab.1.right" timestamp="1578289458686">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1505" height="188" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1578289458686" />
-    <state x="382" y="90" key="SettingsEditor" timestamp="1578809735675">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577861262426" />
-    <state x="382" y="90" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1578809735675" />
-    <state x="489" y="175" width="546" height="524" key="StructurePopup" timestamp="1577858274195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="489" y="175" width="546" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1577858274195" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1577861228785">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1577861228785" />
+    <state x="340" y="111" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1587453474512" />
     <state x="616" y="136" key="VCS.ChangeListViewerDialog" timestamp="1584804997607">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="616" y="136" key="VCS.ChangeListViewerDialog/0.0.1536.864@0.0.1536.864" timestamp="1584804997607" />
-    <state width="768" height="271" key="XDebugger.FullValuePopup" timestamp="1578670932360">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="768" height="271" key="XDebugger.FullValuePopup/0.0.1536.864@0.0.1536.864" timestamp="1578670932360" />
-    <state x="254" y="8" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1577598905515">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="254" y="8" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/0.0.1536.824@0.0.1536.824" timestamp="1577598905515" />
     <state x="93" y="98" width="1350" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579021513132">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1577843705614" />
     <state x="93" y="98" width="1350" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1579021513132" />
-    <state x="240" y="161" width="1149" height="333" key="com.intellij.ide.util.TipDialog" timestamp="1577936025182">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="240" y="154" width="1149" height="333" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1577858060962" />
-    <state x="240" y="161" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1577936025182" />
-    <state x="462" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577858697651">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="462" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1577858697651" />
     <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579077656718">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1579077656718" />
-    <state x="337" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577861707351">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="337" y="149" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1577861707351" />
-    <state x="118" y="106" width="1324" height="404" key="dock-window-1" timestamp="1577621346812">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="118" y="106" width="1324" height="404" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1577621346812" />
-    <state x="459" y="8" width="748" height="847" key="find.popup" timestamp="1578039585942">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="459" y="8" width="748" height="807" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1577857615966" />
-    <state x="459" y="8" width="748" height="847" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1578039585942" />
-    <state x="539" y="146" width="700" height="530" key="recent.locations.popup" timestamp="1577787493040">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="539" y="146" width="700" height="530" key="recent.locations.popup/0.0.1536.824@0.0.1536.824" timestamp="1577787493040" />
     <state x="734" y="151" width="672" height="711" key="search.everywhere.popup" timestamp="1584802431599">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="734" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1577861781906" />
     <state x="734" y="151" width="672" height="711" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1584802431599" />
   </component>
 </project>

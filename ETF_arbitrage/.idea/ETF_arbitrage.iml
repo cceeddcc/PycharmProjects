@@ -6,8 +6,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="python64bit_project" />
     <orderEntry type="module" module-name="파이썬코드참고" />
-    <orderEntry type="module" module-name="Using Machine Learning in Trading and Finance" />
     <orderEntry type="module" module-name="Python and Statistics for Financial Analysis" />
     <orderEntry type="module" module-name="PairTrading" />
+    <orderEntry type="module" module-name="mymod" />
   </component>
 </module>

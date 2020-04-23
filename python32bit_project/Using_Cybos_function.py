@@ -1,6 +1,8 @@
 import win32com.client
 import os
 import Cybos_function
+import sqlite3 as sql
+import pandas as pd
 
 os.getcwd()
 os.chdir("C:/Users/S/Desktop/")
@@ -65,3 +67,25 @@ error_codelist = Cybos_function.Update_KOSPI_Data(*Kospi_codelist,DBname="KOSPI_
 # 코스피 상장 주식 업데이트
 # "C:/Users/S/desktop/바탕화면(임시)/KOSPI/tmp/DB파일"에 저장됨
 Cybos_function.Get_KOSPI_Data("344820",SDate=20091127,EDate=20200122,DBname="KOSPI_Price_DB1")
+
+
+
+# 코스피 지수 data db저장
+EDate = 20200421
+SDate = 20000101
+df_kospi_con = pd.DataFrame()
+for i in range(10) :
+    SDate = 19800101
+    EDate = 19850101
+    df_kospi = Cybos_function.KOSPI_Index_Data(SDate,EDate)
+
+
+# 데이터 수신 및 DB에 저장
+os.chdir("C:/Users/S/Desktop/바탕화면(임시)/KOSPI/tmp")
+con = sql.connect("KOSPI_index.db")
+code = "KOSPI"
+df_kospi.to_sql(code, con, index=False)
+con.close()
+
+
+# 데이터 수집용

@@ -4,7 +4,13 @@ import sqlite3
 from datetime import datetime, timedelta
 import time
 import pandas as pd
+import sys
+os.getcwd()
+sys.path
 
+"""
+Cybos를 활용해서 금융 시계열 데이터를 DB에 저장하기 위해 생성 
+"""
 KOSPI_codelist = []
 KOSPI_namelist = []
 error_codelist = []
@@ -19,9 +25,12 @@ def Get_login_status():
     # 1: 연결, 0: 비연결
     if objCpCybos.IsConnect == 1:
         print("정상적으로 연결되었습니다.")
+        return True
     else:
         print("CybosPlus가 연결되어있지 않습니다.")
         os.startfile("C:\\Users\\S\\Desktop\\CybosPlus.lnk")
+        return False
+
 
 # 코스피 관련 함수
 def Get_KOSPI_code():
@@ -303,6 +312,52 @@ def Get_KOSPI_Data_noadj(*code_list,SDate,EDate,DBname):
     con.close()
     return "정상적으로 완료했습니다."
 
+def KOSPI_Index_Data(SDate,EDate):
+    """
+    KOSPI 지수 데이터를 얻기 위함
+    """
+    if Get_login_status() : # CP로그인 상태 확인
+        pass
+    else :
+        exit()
+    Cybosobj = win32com.client.Dispatch("CpSysDib.StockChart")
+    Cybosobj.SetInputValue(0, "U001")  # 종목코드
+    Cybosobj.SetInputValue(1, ord('1'))  # 기간 요청
+    Cybosobj.SetInputValue(2, EDate)  # 요청 종료 날짜 지정
+    Cybosobj.SetInputValue(3, SDate)  # 요청 시작 날짜 지정
+    Cybosobj.SetInputValue(5, (0, 2, 3, 4, 5, 8, 9))  # 데이터의 종류
+    Cybosobj.SetInputValue(6, ord('D'))  # 차트의 종류, D : 일단위 데이터
+    Cybosobj.SetInputValue(9, ord('1'))  # 수정 주가의 반영 여부, 0:무수정 주가 1 : 반영
+    Cybosobj.BlockRequest()
+    numData = Cybosobj.GetHeaderValue(3)
+
+    Date = []
+    Open = []
+    High = []
+    Low = []
+    Close = []
+    Volume = []
+    Transaction = []  # 거래대금
+
+    for j in range(numData):
+        Date.append(str(Cybosobj.GetDataValue(0, j)))
+        Open.append(Cybosobj.GetDataValue(1, j))
+        High.append(Cybosobj.GetDataValue(2, j))
+        Low.append(Cybosobj.GetDataValue(3, j))
+        Close.append(Cybosobj.GetDataValue(4, j))
+        Volume.append(Cybosobj.GetDataValue(5, j))
+        Transaction.append(Cybosobj.GetDataValue(6, j))
+
+    Kospi_Data = pd.DataFrame({"Date": Date,
+                               "Open": Open,
+                               "High": High,
+                               "Low": Low,
+                               "Close": Close,
+                               "Volume": Volume,
+                               "Transaction": Transaction,
+                               })
+    df_Kospi_Data = Kospi_Data.sort_values(by="Date")
+    return df_Kospi_Data
 
 
 # ETF 분석 관련 함수
@@ -388,12 +443,4 @@ def ETF_GetData(Cybos_obj, ETFcode):
                            "NAV": etfNAV})
     ETF_df = ETF_df.sort_values("Date")
     return ETF_df
-
-
-
-#
-# if __name__ == "__main__" :
-#     Get_login_status()
-#     Get_KOSPI_code()
-#     print(__name__)
 
