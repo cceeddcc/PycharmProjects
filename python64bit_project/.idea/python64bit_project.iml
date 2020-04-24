@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="파이썬코드참고" />
+    <orderEntry type="module" module-name="Modules_usage" />
     <orderEntry type="module" module-name="ETF_arbitrage" />
     <orderEntry type="module" module-name="mymod" />
     <orderEntry type="module" module-name="PairTrading" />

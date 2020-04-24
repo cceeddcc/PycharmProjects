@@ -3,14 +3,40 @@
   <component name="ChangeListManager">
     <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ETF_arbitrage/.idea/ETF_arbitrage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ETF_arbitrage/.idea/ETF_arbitrage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ETF_arbitrage/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ETF_arbitrage/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Using_Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Using_Cybos_function.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/.idea/파이썬코드참고.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/.idea/Modules_usage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/Pandas_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Pyautogui_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/Pyautogui_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Syntax_built-in_usage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/Syntax_built-in_usage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/Tip of the Day.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/Tip of the Day.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/calendar_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/calendar_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/datetime_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/datetime_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/math_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/math_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/matplotlib_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/matplotlib_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/numpy_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/numpy_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/os_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/os_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/random_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/random_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/regex_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/regex_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/scipy활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/scipy활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/sqlite_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/sqlite_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/statsmodels_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/statsmodels_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/sys_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/sys_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/time_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/time_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/win32com_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/win32com_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/대신증권API_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/대신증권API_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/데이터 시각화_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/데이터 시각화_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/웹크롤링_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/웹크롤링_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/파일다루기_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/파일다루기_활용.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../파이썬코드참고/활용문서작성규칙.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/활용문서작성규칙.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +68,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -208,14 +234,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="340" y="111" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1587453474512" />
+    <state x="277" y="75" key="SettingsEditor" timestamp="1587704018693">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="277" y="75" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1587704018693" />
     <state x="616" y="136" key="VCS.ChangeListViewerDialog" timestamp="1584804997607">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="616" y="136" key="VCS.ChangeListViewerDialog/0.0.1536.864@0.0.1536.864" timestamp="1584804997607" />
-    <state x="93" y="98" width="1350" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579021513132">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="93" y="98" width="1350" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864@0.0.1536.864" timestamp="1579021513132" />
     <state x="411" y="353" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579077656718">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

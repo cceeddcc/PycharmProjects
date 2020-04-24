@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ETF_arbitrage/.idea/ETF_arbitrage.iml" filepath="$PROJECT_DIR$/../ETF_arbitrage/.idea/ETF_arbitrage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Modules_usage/.idea/Modules_usage.iml" filepath="$PROJECT_DIR$/../Modules_usage/.idea/Modules_usage.iml" />
       <module fileurl="file://$PROJECT_DIR$/../PairTrading/.idea/PairTrading.iml" filepath="$PROJECT_DIR$/../PairTrading/.idea/PairTrading.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Python and Statistics for Financial Analysis/.idea/Python and Statistics for Financial Analysis.iml" filepath="$PROJECT_DIR$/../Python and Statistics for Financial Analysis/.idea/Python and Statistics for Financial Analysis.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mymod/.idea/mymod.iml" filepath="$PROJECT_DIR$/../mymod/.idea/mymod.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python64bit_project.iml" filepath="$PROJECT_DIR$/.idea/python64bit_project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../파이썬코드참고/.idea/파이썬코드참고.iml" filepath="$PROJECT_DIR$/../파이썬코드참고/.idea/파이썬코드참고.iml" />
     </modules>
   </component>
 </project>

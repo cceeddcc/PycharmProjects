@@ -10,10 +10,10 @@ sys.path
 """
 Add a directory to sys.path
 """
-sys.path.append("C:\\Users\\S\\PycharmProjects\\파이썬코드참고")
+sys.path.append("C:\\Users\\S\\PycharmProjects\\Modules_usage")
 
 # Methods : sys.path.remove()
 """
 remove a directory to sys.path
 """
-sys.path.remove("C:\\Users\\S\\PycharmProjects\\파이썬코드참고")
+sys.path.remove("C:\\Users\\S\\PycharmProjects\\Modules_usage")

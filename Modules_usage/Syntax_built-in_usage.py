@@ -524,39 +524,17 @@ while True : # 무한 루프 실행
     x+=1
 
 
-
-
-
-
-
-
-
-#### Class
+# syn : Class
 """
+create blueprint for reducing repetitive using of code 
 """
-class BusinessCard :
-    def set_info(self, name, email, addr): # method 정의 , self는 후에 생성하게 될 instance명을 의미한다고 보면 된다.
-        self.name = name
-        self.email = email
-        self.addr = addr
 
-    def print_info(self):
-        print("------------------------")
-        print("Name : ", self.name)
-        print("Email : ", self.email)
-        print("Address : ", self.addr)
-        print("------------------------")
-
-member1 = BusinessCard()
-member1.set_info("Harim","cceeddcc@naver.com","서울시 동대문구")
-member1.print_info()
-
-## 생성자 __init__ (initialize)
+# __init__ (initialize)
 """
-class의 객체를 생성했을 때, 실행되는 함수를 정의하는 것
-이를 활용해서 초기값을 넣을 수 있다.
+define initialized attributes
+this will be executed when instance is initialized
 """
-class BusinessCard2() :
+class BusinessCard() :
     def __init__(self, name, email, addr):
         self.name = name
         self.email = email
@@ -569,47 +547,305 @@ class BusinessCard2() :
         print("Address : ", self.addr)
         print("------------------------")
 
-member2 = BusinessCard2("하림","cceedd", "전주시")
-member2.print_info()
+member = BusinessCard("하림","cceedd", "전주시")
+member.print_info()
 
-## class 변수, instance 변수 구분
+# Class variable
 class Account :
-    accountnum = 0 # class 변수에 해당
+    accountnum = 0 # Class variable
     def __init__(self, name):
-        self.name = name # instance 변수에 해당
+        self.name = name # instance variable
         Account.accountnum += 1
     def __del__(self):
         Account.accountnum -= 1
 
-# 각 종류의 변수는 해당 namespace에 값을 저장함
+Account.accountnum
 Kim = Account("Kim")
 Lee = Account("Lee")
 
-Kim.__dict__
-Lee.__dict__
-Account.__dict__
-Kim.accountnum # instance 네임스페이스에 없기때문에 class 네임스페이스에서 값을 찾아옴
+# if the attribute not exist in instance's namespace,
+# find it in class's namespace
+Kim.__dict__ # instance's namespace
+Kim.accountnum
 
-## Class 상속
+Account.__dict__ # class's namespace
+Account.accountnum
+
+# Regular methods, Class methods, Static methods
 """
-부모 Class에서 정의된 method들을 상속받아 수정, 관리가 쉽고 업그레이드가 가능해짐
+Regular methods are methods that automatically take 'the instance' as the first argument. 
+Class methods are methods that automatically take 'the class' as the first argument. 
+Static methods 'do not take' the instance or the class as the first argument.
+"""
+class Employee :
+
+    num_of_emps = 0
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + "." + last + "@email.com"
+        self.pay = pay
+
+        Employee.num_of_emps += 1
+
+    def fullname(self): # Regular method
+        return "{} {}".format(self.first,self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay*self.raise_amt)
+
+    @classmethod # Regular method -> Class method
+    def set_raise_amt(cls, amount): # cls : class
+        cls.raise_amt = amount
+
+    @classmethod
+    def from_string(cls, emp_str):
+        """
+        string data에서 parameter parsing후 class instance만들기
+        """
+        first, last, pay = emp_str.split("-")
+        return cls(first, last, pay)
+
+    @staticmethod # Regular method -> Static method
+    def is_workday(day):
+        if day.weekday() == 5 or day.weekday() == 6 :
+            return False
+        return True
+
+emp_1 = Employee("Corey", "Schafer", 50000)
+emp_2 = Employee("Test", "Employee", 60000)
+
+# class methods 활용
+Employee.set_raise_amt(1.05)
+print(Employee.raise_amt, emp_1.raise_amt, emp_2.raise_amt)
+
+emp_str_1 = "John-Doe-70000"
+emp_str_2 = "Steve-Smith-30000"
+
+new_emp_1 = Employee.from_string(emp_str_1)
+new_emp_2 = Employee.from_string(emp_str_2)
+print(new_emp_1.fullname(),new_emp_2.fullname())
+
+# static method 활용
+"""
+if the method that we want to create don't need class or instance,
+we use static method 
+"""
+import datetime
+my_date = datetime.date(2016, 7, 10)
+print(Employee.is_workday(my_date))
+
+
+# class inheritance
+"""
+Creating sub class inherited from parent class 
+makes easy to upgrade or to manage class
+"""
+class Employee :
+
+    raise_amt = 1.04
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + "." + last + "@email.com"
+        self.pay = pay
+
+    def fullname(self): # Regular method
+        return "{} {}".format(self.first,self.last)
+
+    def apply_raise(self):
+        self.pay = int(self.pay*self.raise_amt)
+
+# bi : super()
+"""
+sub class inherit the code from parent class
+"""
+class Developer(Employee):
+    raise_amt = 1.10 # sub class variable
+
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first, last, pay)
+        self.prog_lang = prog_lang
+
+dev_1 = Developer("Corey", "Schafer", 50000, "Python")
+dev_2 = Developer("Test", "Employee", 60000, "Java")
+
+help(Developer) # information of inheritance
+
+dev_1.pay
+dev_1.apply_raise()
+dev_1.pay
+
+dev_1.prog_lang
+
+# upgrade sub class
+class Manager(Employee):
+
+    def __init__(self, first, last, pay, employees=None):
+        super().__init__(first, last, pay)
+        if employees is None:
+            self.employees =[]
+        else :
+            self.employees = employees
+
+    def add_emp(self, emp):
+        if emp not in self.employees:
+            self.employees.append(emp)
+
+    def remove_emp(self, emp):
+        if emp in self.employees:
+            self.employees.remove(emp)
+
+    def print_emps(self):
+        for emp in self.employees:
+            print("-->", emp.fullname())
+
+help(Manager)
+mgr_1 = Manager("Sue", "Smith", 90000, [dev_1])
+mgr_1.print_emps()
+mgr_1.add_emp(dev_2)
+mgr_1.print_emps()
+mgr_1.remove_emp(dev_2)
+mgr_1.print_emps()
+
+# bi : isinstance
+"""
+check whether the instance is come from the class
+"""
+isinstance(mgr_1, Manager)
+isinstance(mgr_1, Employee) # parent class
+isinstance(mgr_1, Developer)
+
+# bi : issubclass
+"""
+check whether the subclass is come from the class
+"""
+issubclass(Manager, Employee)
+issubclass(Developer, Employee)
+issubclass(Manager, Developer)
+
+
+# syn : Dunder
+"""
+Double underscore : __something__
+someone call this Magic method 
+Python Doc : https://docs.python.org/3/reference/datamodel.html#special-method-names
 """
 
-class parent :
-    def singing(self):
-        print("sing a song")
+class Employee :
 
-father = parent()
-father.singing()
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + "." + last + "@email.com"
+        self.pay = pay
 
-# 상속
-class lucky_child(parent):
-    def dancing(self):
-        print("play dance")
+    def fullname(self): # Regular method
+        return "{} {}".format(self.first,self.last)
 
-child1 = lucky_child()
-child1.singing()
-child1.dancing()
+    # Dunder 예시
+    def __repr__(self):
+        """
+        change to unambiguous representation of objects
+        """
+        return "Employee('{}', '{}', {})".format(self.first, self.last, self.pay)
+
+    def __str__(self):
+        return '{} - {}'.format(self.fullname(), self.email)
+
+    def __add__(self, other):
+        return self.pay + other.pay
+
+emp_1 = Employee("Corey", "Schafer", 50000)
+emp_2 = Employee("Test", "Employee", 60000)
+emp_1 # __repr__ method 사용으로 바뀐 결과
+
+repr(emp_1)
+emp_1.__repr__() # 위와 같음
+str(emp_1)
+emp_1.__str__() # 위와 같음
+
+1+2
+int.__add__(1,2) # 위와 동일한 background에서 실행되는 코드
+
+"a"+"b"
+str.__add__("a","b") # 위와 동일한 background에서 실행되는 코드
+
+emp_1+emp_2
+Employee.__add__(emp_1,emp_2)
+
+# syn : Property Decorators
+"""
+Getters : @property
+Setters : @property.setter
+Deleters : @property.deleter
+"""
+# 문제점
+class Employee :
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+        self.email = first + "." + last + "@email.com"
+
+    def fullname(self): # Regular method
+        return "{} {}".format(self.first,self.last)
+
+emp_1 = Employee("John", "Smith")
+emp_1.first = "James"
+print(emp_1.first)
+print(emp_1.email) # 초기 생성된 property가 변하지 않는 문제
+print(emp_1.fullname())
+
+# 해결
+class Employee :
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    @property # Regular method -> property
+    def email(self):
+        return '{}.{}@email.com'.format(self.first, self.last)
+
+    @property
+    def fullname(self): # Regular method
+        return "{} {}".format(self.first,self.last)
+
+    @fullname.setter # property 변경 가능하도록 하기 위함
+    def fullname(self, name):
+        first, last = name.split(" ")
+        self.first = first
+        self.last = last
+
+    @fullname.deleter # property 삭제하기 위함
+    def fullname(self):
+        self.first = None
+        self.last = None
+
+
+emp_1 = Employee("John", "Smith")
+emp_1.first = "James"
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+# setter 활용
+emp_1.fullname = "Harim Jeong"
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+# deleter 활용
+del emp_1.fullname
+print(emp_1.first)
+print(emp_1.email)
+print(emp_1.fullname)
+
+
 
 
 
