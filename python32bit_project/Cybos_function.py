@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 import time
 import pandas as pd
 import sys
-import random
 os.getcwd()
 sys.path
 
