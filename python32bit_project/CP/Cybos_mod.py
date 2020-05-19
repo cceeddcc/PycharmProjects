@@ -135,15 +135,15 @@ class CP_KOSPI(CP_Util) :
         self.instStockChart.SetInputValue(1, ord('1'))  # 기간 요청
         self.instStockChart.SetInputValue(2, Edate)  # 요청 종료 날짜
         self.instStockChart.SetInputValue(3, Sdate)  # 요청 시작 날짜
-        # 날짜, 시가, 고가, 저가, 종가, 거래량
-        self.instStockChart.SetInputValue(5, (0, 2, 3, 4, 5, 8, 9))
+        # 날짜, 시가, 고가, 저가, 종가, 거래량, 시총
+        self.instStockChart.SetInputValue(5, (0, 2, 3, 4, 5, 8, 9, 13))
         self.instStockChart.SetInputValue(6, ord('D'))  # D : 일단위 데이터
         self.instStockChart.SetInputValue(9, ord('1'))  # 수정주가
         self.instStockChart.BlockRequest()
         numdata = self.instStockChart.GetHeaderValue(3)  # 데이터 개수
 
         # get output data
-        columns = ["Date", "Open", "High", "Low", "Close", "Volume"]
+        columns = ["Date", "Open", "High", "Low", "Close", "Volume", "Mcap"]
         df = pd.DataFrame()
         for j, col in enumerate(columns):
             df[col] = [self.instStockChart.GetDataValue(j, i) for i in range(numdata)]

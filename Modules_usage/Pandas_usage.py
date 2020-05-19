@@ -1,5 +1,17 @@
-# 참고 홈페이지
-# https://pandas.pydata.org/pandas-docs/stable/
+"""
+
+doc : https://pandas.pydata.org/pandas-docs/stable/
+
+navigator
+# Theme  : ...
+# Package : ...
+# Module : ...
+# Class : ...
+# Method : ...
+# : comments / examples
+
+"""
+
 
 import numpy as np
 import pandas as pd
@@ -168,6 +180,17 @@ df
 df2 = df.copy() # 객체 복사
 df2[df2 > 0] = -df2 # 조건식 활용한 데이터 할당
 df2
+
+# Method : pd.DataFrame.drop()
+"""
+Remove rows or columns by specifying label names and corresponding
+axis, or by specifying directly index or column names
+"""
+help(pd.DataFrame.drop)
+df = pd.DataFrame(np.arange(12).reshape(3, 4),columns=['A', 'B', 'C', 'D'])
+df.drop(columns=['B', 'C'], axis=1)
+df.drop(index=[0, 1])
+
 
 #### Missing data
 """
@@ -384,6 +407,7 @@ df.cov()
 ## DataFrame.append()
 """
 Dataframe 객체에 행추가 메서드
+insert row 
 """
 df = pd.DataFrame(np.random.randn(8, 4), columns=['A', 'B', 'C', 'D']) ; df
 s = df.iloc[3] ; s
@@ -457,6 +481,21 @@ ts.resample('5S').sum() # 주기를 변경해서 다시 생성
 rng = pd.date_range('3/6/2012 00:00', periods=5, freq='D')
 ts = pd.Series(np.random.randn(len(rng)), rng) ;ts
 ts.resample('5Min').sum() # 주기를 변경해서 다시 생성
+
+pd.date_range(start="19490101", end="19601201", freq="MS", closed=None) # MS
+
+# Method : pd.DataFrame.sample()
+"""
+Return a random sample of items from an axis of object
+use to split the data into train and test
+"""
+help(pd.DataFrame.sample)
+df = pd.DataFrame({'num_legs': [2, 4, 8, 0],
+                   'num_wings': [2, 0, 0, 0],
+                   'num_specimen_seen': [10, 2, 1, 8]},
+                  index=['falcon', 'dog', 'spider', 'fish']); df
+df.sample(frac=0.5, replace=False, random_state=1) # 50% samples
+df.sample(n=3, replace=True) # 3 samples
 
 
 
@@ -609,3 +648,14 @@ ma5.tail(10)
 """
 gs.insert(len(gs.columns),"MA5",ma5) # (열 순서, 열 이름, 데이터)
 gs.head()
+
+# Method : pd.DataFrame.diff()
+"""
+Calculates the difference of a DataFrame element compared with another
+element in the DataFrame (default is the element in the same column
+of the previous row).    
+"""
+help(pd.DataFrame.diff)
+df = pd.DataFrame({'a': [1, 2, 3, 4, 5, 6], 'b': [1, 1, 2, 3, 5, 8], 'c': [1, 4, 9, 16, 25, 36]})
+df.diff(periods=3)
+df-df.shift(3) # 상동

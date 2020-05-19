@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59082d0e-3719-4652-aa29-e49c9e0c682f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/practice1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/practice1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Modules_usage/statsmodels_usage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modules_usage/Pandas_활용.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/Pandas_usage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modules_usage/Syntax_built-in_usage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Modules_usage/Syntax_built-in_usage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Modules_usage/statsmodels_활용.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cybos_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cybos_function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CP/Cybos_mod.py" beforeDir="false" afterPath="$PROJECT_DIR$/CP/Cybos_mod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/python64bit_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../python64bit_project/.idea/workspace.xml" afterDir="false" />
@@ -40,7 +42,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python64bit_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
   <component name="RecentsManager">
@@ -220,9 +222,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="616" y="136" key="VCS.ChangeListViewerDialog/0.0.1536.864@0.0.1536.864" timestamp="1584804997607" />
-    <state x="734" y="151" width="672" height="711" key="search.everywhere.popup" timestamp="1587744907945">
+    <state x="734" y="151" width="672" height="711" key="search.everywhere.popup" timestamp="1588067227782">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="734" y="151" width="672" height="711" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587744907945" />
+    <state x="734" y="151" width="672" height="711" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1588067227782" />
   </component>
 </project>

@@ -107,6 +107,14 @@ m
 m = f"{greeting}, {name.upper()}. Welcome!"
 m
 
+# ex)
+"My name is %s" %"하림"
+"My name is {}".format("하림")
+"{} x {} = {}".format(2,3,2*3)
+"{2} x {0} = {1}".format(3,2*3,2) # 순서 지정 가능
+"{0:.4f}".format(0.12345) # 소수점 4째자리 까지 나타냄
+
+
 # method : str.join()
 """
 Concatenate any number of strings.
@@ -849,15 +857,6 @@ print(emp_1.fullname)
 
 
 
-## formatting
-"""
-소수점, 문자열 등 포멧 지정 
-"""
-"My name is %s" %"하림"
-"My name is {}".format("하림")
-"{} x {} = {}".format(2,3,2*3)
-"{2} x {0} = {1}".format(3,2*3,2) # 순서 지정 가능
-"{0:.4f}".format(0.12345) # 소수점 4째자리 까지 나타냄 
 
 #### PEP8
 """
